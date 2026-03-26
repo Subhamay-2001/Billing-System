@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Biling System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h2>Billing System</h2>
+    <div class="container">
+        <input type="text" id="item" placeholder="Item-Name">
+        <input type="text" id="price" placeholder="Price">
+        <input type="text" id="qty" placeholder="Quantity">
+        <button onclick="addItem()">Add Item</button>
+        <table id="billTable">
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Total</th>
+            </tr>
+        </table>
+        <h3>Subtotal: ₹<span id="subtotal">0</span></h3>
+        <h3>GST(18%): ₹<span id="gst">0</span></h3>
+        <h3>Discount: ₹<input type="number" id="discount" value="0"></h3>
+        <h3>Final Total: ₹<span id="finalTotal">0</span></h3>
+        <button onclick="calculateTotal()">Generate Bill</button>
+        <button onclick="window.print()">Print</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
